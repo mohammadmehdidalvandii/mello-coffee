@@ -1,0 +1,83 @@
+"use client"
+import Image from 'next/image'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import {FaSearch, FaShoppingCart, FaTimes } from 'react-icons/fa'
+
+const Navbar:React.FC =()=>{
+    const [activeSearch , setActiveSearch] = useState<boolean>(false);
+
+    const handlerShowSearch:React.ReactEventHandler = ()=>{
+        setActiveSearch(!activeSearch)
+    }
+    const handlerExitSearch:React.ReactEventHandler = ()=>{
+        setActiveSearch(false)
+    }
+
+  return (
+    <section className="block bg-white py-4 border-b border-b-secondary-100 relative">
+        <div className="container">
+            <div className="flex items-center justify-between">
+                <ul className="flex gap-4">
+                    <li className="block">
+                        <Link href='' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>خرید قهوه</Link>
+                    </li>
+                    <li className="block">
+                        <Link href='' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>قهوه ترک</Link>
+                    </li>
+                    <li className="block">
+                        <Link href='' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>فرنچ پرس</Link>
+                    </li>
+                    <li className="block">
+                        <Link href='' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>موکاپات</Link>
+                    </li>
+                    <li className="block">
+                        <Link href='' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>قهوه های ملو</Link>
+                    </li>
+                </ul>
+                <Link href='/'>
+                    <Image src='/assets/images/logo.png' width={100} height={100} alt='logo image'/>
+                </Link>
+
+                <div className="flex items-center gap-4">
+                    <Link href='/' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
+                    <span className="block cursor-pointer text-text duration-300 ease-linear hover:text-secondary-100"
+                    onClick={handlerShowSearch}
+                    >
+                        {activeSearch ? (
+                            <FaTimes/>
+                        ) : (
+                            <FaSearch/>
+                        )}
+                    </span>
+                    {activeSearch && (
+                        <div className="block bg-white shadow-2xl shadow-secondary-100 w-full fixed top-30 right-0 h-[85dvh] p-8 ">
+                            <span className="block absolute left-4 text-3xl cursor-pointer"
+                            onClick={handlerExitSearch}
+                            >
+                                <FaTimes/>
+                            </span>
+                            <input type="text" className="block text-center w-full text-5xl font-iranBold text-text outline-0 border-0" placeholder='جستجوی محصولات'/>
+                            <span className="block font-iranMedium text-sm text-center mt-4 text-primary-100">محصول جستجو کرد و منتظر مانده ...</span>
+                        </div>
+                    )}
+                    <Link href='' className="flex items-center justify-between gap-2 relative bg-primary-100 rounded-full w-[100px] h-10 px-3" >
+                        <span className="flex items-center justify-center bg-white rounded-full w-8 h-8"
+                        >
+                            <FaShoppingCart/>
+                        </span>
+                        <span className="block text-[0.7rem] text-white font-iranMedium text-balance">
+                            230,000
+                            تومان
+                        </span>
+                        <span className="flex justify-center items-center bg-white h-4 w-4 rounded-full absolute -top-2 left-0">0</span>
+                    </Link>
+                </div>
+            </div>
+        </div>
+          
+    </section>
+  )
+}
+
+export default Navbar
