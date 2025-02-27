@@ -47,3 +47,8 @@
     padding-left: 1rem;
 }
 
+@layer components{
+    .bg_shadow{
+        @apply block fixed bg-black/60 backdrop-blur-[3px] top-0 right-0 h-full w-full z-50
+    }
+}
