@@ -3,6 +3,7 @@ import Navbar from '@/components/module/Navbar/Navbar'
 import Confidence from '@/components/template/home/Confidence/Confidence'
 import Category from '@/components/template/home/Category/Category'
 import React from 'react'
+import Products from '@/components/template/home/Products/Products'
 
 const page:React.FC = ()=>{
   return (
@@ -11,6 +12,7 @@ const page:React.FC = ()=>{
   <MainHeader/>
   <Category/>
   <Confidence/>
+  <Products/>
   <br /><br /><br /><br /><br />
   </>
   )
