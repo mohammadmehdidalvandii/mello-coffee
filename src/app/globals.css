@@ -51,4 +51,10 @@
     .bg_shadow{
         @apply block fixed bg-black/60 backdrop-blur-[3px] top-0 right-0 h-full w-full z-50
     }
+    .btn_primary{
+        @apply flex justify-center items-center h-12 font-iranMedium font-bold text-md bg-primary-100 text-white w-[120px] rounded-lg duration-300 ease-linear hover:bg-primary-400;
+    }
+    .btn_secondary{
+        @apply flex justify-center items-center h-12 w-[120px] font-iranMedium font-bold text-md border border-primary-100 rounded-lg duration-300 ease-linear hover:bg-primary-100 hover:text-white
+    }
 }
