@@ -4,7 +4,7 @@ import React from 'react'
 
 const ArticleCart:React.FC = ()=>{
   return (
-    <div className="block shadow shadow-secondary-200 rounded-lg overflow-auto relative">
+    <div className="block shadow shadow-secondary-200 rounded-lg overflow-auto relative mb-3">
     <Image src='/assets/images/articles.jpg' alt='article'  width={300} height={200} className=''/>
     <span className="block absolute bg-white top-3 right-3 font-iranMedium text-sm text-center p-2 rounded-sm">03 <br /> اسفند</span>
     <span className="flex justify-center items-center mt-1 w-[140px] bg-primary-100 text-white rounded-sm p-0.5 mx-auto text-center">دانستنیهای قهوه</span>
