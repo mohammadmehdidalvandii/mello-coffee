@@ -9,6 +9,7 @@ import ToolsCoffee from '@/components/template/home/ToolsCoffee/ToolsCoffee'
 import SuggestProducts from '@/components/template/home/SuggestProducts/SuggestProducts'
 import HomeAbout from '@/components/template/home/HomeAbout/HomeAbout'
 import Articles from '@/components/template/home/Articles/Articles'
+import Newsletter from '@/components/template/home/Newsletter/Newsletter'
 
 const page:React.FC = ()=>{
   return (
@@ -23,6 +24,7 @@ const page:React.FC = ()=>{
   <SuggestProducts/>
   <HomeAbout/>
   <Articles/>
+  <Newsletter/>
   <br /><br /><br /><br /><br />
   </>
   )
