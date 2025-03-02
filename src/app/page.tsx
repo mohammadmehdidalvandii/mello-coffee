@@ -6,6 +6,7 @@ import React from 'react'
 import Products from '@/components/template/home/Products/Products'
 import TypeCoffee from '@/components/template/home/TypeCoffee/TypeCoffee'
 import ToolsCoffee from '@/components/template/home/ToolsCoffee/ToolsCoffee'
+import SuggestProducts from '@/components/template/home/SuggestProducts/SuggestProducts'
 
 const page:React.FC = ()=>{
   return (
@@ -17,6 +18,7 @@ const page:React.FC = ()=>{
   <Products/>
   <TypeCoffee/>
   <ToolsCoffee/>
+  <SuggestProducts/>
   <br /><br /><br /><br /><br />
   </>
   )
