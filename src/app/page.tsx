@@ -10,6 +10,7 @@ import SuggestProducts from '@/components/template/home/SuggestProducts/SuggestP
 import HomeAbout from '@/components/template/home/HomeAbout/HomeAbout'
 import Articles from '@/components/template/home/Articles/Articles'
 import Newsletter from '@/components/template/home/Newsletter/Newsletter'
+import Footer from '@/components/module/Footer/Footer'
 
 const page:React.FC = ()=>{
   return (
@@ -25,7 +26,7 @@ const page:React.FC = ()=>{
   <HomeAbout/>
   <Articles/>
   <Newsletter/>
-  <br /><br /><br /><br /><br />
+  <Footer/>
   </>
   )
 }
