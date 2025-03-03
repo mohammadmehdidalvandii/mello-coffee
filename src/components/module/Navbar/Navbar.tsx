@@ -29,7 +29,7 @@ const Navbar:React.FC =()=>{
             <div className="flex items-center justify-between">
                 <ul className="flex gap-4">
                     <li className="block">
-                        <Link href='' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>خرید قهوه</Link>
+                        <Link href='/shop' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>خرید قهوه</Link>
                     </li>
                     <li className="block">
                         <Link href='' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>قهوه ترک</Link>
