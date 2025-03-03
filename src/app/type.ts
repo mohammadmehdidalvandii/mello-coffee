@@ -6,3 +6,7 @@ export type layoutPropsType = Readonly<{
 export type TitleTypeProps = {
     title:string
 }
+
+export type BreadcrumbType = {
+    text : string
+}
