@@ -49,7 +49,7 @@ const Navbar:React.FC =()=>{
                 </Link>
 
                 <div className="flex items-center gap-4">
-                    <Link href='/' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
+                    <Link href='/loginOrRegister' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
                     <span className="block cursor-pointer text-text duration-300 ease-linear hover:text-secondary-100"
                     onClick={handlerShowSearch}
                     >
@@ -100,7 +100,7 @@ const Navbar:React.FC =()=>{
                             <div className="bg_shadow text-white"></div>
                                 <div className="block fixed top-0 right-0 bg-white w-[300px] h-full z-[90]">
                                     <div className="flex justify-between items-center p-5">
-                                    <Link href='/' className='block font-iranMedium font-semibold text-xl text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
+                                    <Link href='/loginOrRegister' className='block font-iranMedium font-semibold text-xl text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
                                         <span className="block text-2xl text-text duration-300 ease-linear hover:text-secondary-100 cursor-pointer"
                                         onClick={handlerExitMenu}
                                         >
