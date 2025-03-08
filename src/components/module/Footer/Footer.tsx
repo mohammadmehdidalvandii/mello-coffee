@@ -76,10 +76,10 @@ const Footer:React.FC = ()=>{
             <div className="flex justify-center items-center mt-8 bg-white py-4 text-secondary-100 rounded-md">
                 <ul className="flex items-center justify-center gap-8 flex-wrap">
                     <li className='block'>
-                        <Link href='' className='block font-iranMedium text-md font-bold duration-300 ease-linear hover:text-primary-100'>خانه</Link>
+                        <Link href='/' className='block font-iranMedium text-md font-bold duration-300 ease-linear hover:text-primary-100'>خانه</Link>
                     </li>
                     <li className='block'>
-                        <Link href='' className='block font-iranMedium text-md font-bold duration-300 ease-linear hover:text-primary-100'>مقاله </Link>
+                        <Link href='/blog' className='block font-iranMedium text-md font-bold duration-300 ease-linear hover:text-primary-100'>مقاله </Link>
                     </li>
                     <li className='block'>
                         <Link href='' className='block font-iranMedium text-md font-bold duration-300 ease-linear hover:text-primary-100'>قهوه برند</Link>
