@@ -66,3 +66,7 @@
         placeholder:font-iranMedium placeholder:text-md placeholder:font-bold pr-1
     }
 }
+.swiper-button-next , 
+.swiper-button-prev{
+    color: var(--color-primary-100) !important;
+}
