@@ -1,5 +1,6 @@
 import React from 'react'
 import Gallery from '../Gallery/Gallery'
+import Details from '../Details/Details'
 
 const SingleProducts:React.FC = ()=>{
   return (
@@ -9,7 +10,9 @@ const SingleProducts:React.FC = ()=>{
                 <div className="block">
                     <Gallery/>
                 </div>
-                <div className="block bg-amber-500">this is item</div>
+                <div className="block">
+                    <Details/>
+                </div>
             </div>
         </div>
     </section>
