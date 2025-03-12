@@ -1,6 +1,7 @@
 import React from 'react'
 import Gallery from '../Gallery/Gallery'
 import Details from '../Details/Details'
+import Info from '../Info/Info'
 
 const SingleProducts:React.FC = ()=>{
   return (
@@ -13,6 +14,9 @@ const SingleProducts:React.FC = ()=>{
                 <div className="block">
                     <Details/>
                 </div>
+            </div>
+            <div className="block mt-4 border-t border-secondary-100">
+              <Info/>
             </div>
         </div>
     </section>
