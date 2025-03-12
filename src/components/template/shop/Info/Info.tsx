@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+import Describe from '../Describe/Describe'
 
 const Info:React.FC = ()=>{
     const [menu , setMenu] = useState<String>("describe")
@@ -18,8 +19,8 @@ const Info:React.FC = ()=>{
                 onClick={()=>handlerMenu("comment")}
                 >نظرات 0</button>
             </div>
-            <div className="block mt-4">
-                {menu === "describe" && (<h1>d</h1>)}
+            <div className="block mt-8">
+                {menu === "describe" && (<Describe/>)}
                 {menu === "comment" && (<h1>c</h1>)}
             </div>
     </section>
