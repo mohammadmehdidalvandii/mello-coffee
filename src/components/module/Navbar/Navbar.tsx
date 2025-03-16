@@ -70,7 +70,7 @@ const Navbar:React.FC =()=>{
                             <span className="block font-iranMedium text-sm text-center mt-4 text-primary-100">محصول جستجو کرد و منتظر مانده ...</span>
                         </div>
                     )}
-                    <Link href='' className="flex items-center justify-between gap-2 relative bg-primary-100 rounded-full w-[100px] h-10 px-3" >
+                    <Link href='/cart' className="flex items-center justify-between gap-2 relative bg-primary-100 rounded-full w-[100px] h-10 px-3" >
                         <span className="flex items-center justify-center bg-white rounded-full w-8 h-8"
                         >
                             <FaShoppingCart/>
@@ -141,7 +141,7 @@ const Navbar:React.FC =()=>{
                             <Image src='/assets/images/logo.png' width={100} height={100} alt='logo image'/>
                         </Link>
 
-                        <Link href='' className='flex justify-center items-center text-secondary-100 text-2xl w-12 h-12 rounded-full border border-secondary-100 relative duration-300 ease-linear hover:text-primary-100'>
+                        <Link href='/cart' className='flex justify-center items-center text-secondary-100 text-2xl w-12 h-12 rounded-full border border-secondary-100 relative duration-300 ease-linear hover:text-primary-100'>
                             <span className="block">
                                 <FaShoppingCart/>
                             </span>
