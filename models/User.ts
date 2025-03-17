@@ -10,12 +10,6 @@ const schema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        validate: {
-            validator: function(v: string) {
-                return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v);
-            },
-            message: props => `${props.value} is not a valid email address!`
-        }
     },
     phone:{
         type: String,
