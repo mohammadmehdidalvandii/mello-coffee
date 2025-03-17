@@ -26,6 +26,10 @@ const schema = new mongoose.Schema({
         required:true,
         minlength: 8
     },
+    role:{
+      type: String,
+        default : "USER",
+    },
     refreshToken :String
 });
 
