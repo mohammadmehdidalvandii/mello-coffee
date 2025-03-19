@@ -61,7 +61,7 @@ const Register:React.FC =  ()=>{
           swal({
             title: "ثبت نام با موفقیت انجام شد",
             icon: "success",
-            buttons: ["خانه"] as any
+            buttons: "خانه" 
           }).then(() => {
             location.replace('/');
           });

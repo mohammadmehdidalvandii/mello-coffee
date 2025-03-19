@@ -59,7 +59,7 @@ export async function POST (req:NextRequest){
         const refreshToken = generateRefreshToken(
             {
                 email ,
-                roles:user.role
+                roles:user.role 
             }
         )
 
