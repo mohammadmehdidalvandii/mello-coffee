@@ -8,10 +8,10 @@ const Sidebar:React.FC =()=>{
             <h6 className="block font-iranBold text-xl border-b border-b-secondary-100 pb-4">حساب کاربری من</h6>
             <ul className="block mt-4">
                 <li className="block mb-4">
-                    <Link href='' className='block font-iranMedium text-lg bg-secondary-400 p-2 rounded-full'>پیشخوان</Link>
+                    <Link href='/PanelUser' className='block font-iranMedium text-lg bg-secondary-400 p-2 rounded-full'>پیشخوان</Link>
                 </li>
                 <li className="block mb-4">
-                    <Link href='' className='block font-iranMedium text-lg'>سفارش ها</Link>
+                    <Link href='/PanelUser/Order' className='block font-iranMedium text-lg'>سفارش ها</Link>
                 </li>
                 <li className="block mb-4">
                     <Link href='' className='block font-iranMedium text-lg'>آدرس</Link>

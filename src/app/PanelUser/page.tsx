@@ -5,7 +5,7 @@ import Dashboard from '@/components/template/p-user/Dashboard/Dashboard'
 const page:React.FC = ()=>{
   return (
     <Layout>
-        <Dashboard/>d
+        <Dashboard/>
     </Layout>
   )
 }
