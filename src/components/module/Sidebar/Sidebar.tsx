@@ -20,7 +20,7 @@ const Sidebar:React.FC =()=>{
                     <Link href='/PanelUser/MyWallet' className='block font-iranMedium text-lg'>کیف پول من</Link>
                 </li>
                 <li className="block mb-4">
-                    <Link href='' className='block font-iranMedium text-lg'>اطلاعات حساب کاربری</Link>
+                    <Link href='/PanelUser/Account' className='block font-iranMedium text-lg'>اطلاعات حساب کاربری</Link>
                 </li>
                 <li className="block mb-4">
                     <button className='black font-iranMedium text-lg duration-300 ease-linear hover:text-danger cursor-pointer'>خروج</button>
