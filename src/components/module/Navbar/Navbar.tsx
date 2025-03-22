@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import {FaBars, FaSearch, FaShoppingCart, FaTimes } from 'react-icons/fa'
 
-const Navbar:React.FC =()=>{
+const Navbar:React.FC =({isLogin , role})=>{
     const [activeSearch , setActiveSearch] = useState<boolean>(false);
     const [activeShowMenu , setActiveShowMenu] = useState<boolean>(false)
 
@@ -49,7 +49,11 @@ const Navbar:React.FC =()=>{
                 </Link>
 
                 <div className="flex items-center gap-4">
-                    <Link href='/loginOrRegister' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
+                    {!isLogin ? (
+                        <Link href='/loginOrRegister' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
+                    ) :(
+                         <Link href={role === "ADMIN" ? '/PanelAdmin' : '/PanelUser'} className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>حساب کاربری من</Link>
+                    )}
                     <span className="block cursor-pointer text-text duration-300 ease-linear hover:text-secondary-100"
                     onClick={handlerShowSearch}
                     >
@@ -100,7 +104,11 @@ const Navbar:React.FC =()=>{
                             <div className="bg_shadow text-white"></div>
                                 <div className="block fixed top-0 right-0 bg-white w-[300px] h-full z-[90]">
                                     <div className="flex justify-between items-center p-5">
-                                    <Link href='/loginOrRegister' className='block font-iranMedium font-semibold text-xl text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
+                                    {!isLogin ? (
+                        <Link href='/loginOrRegister' className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>ورود | ثبت نام</Link>
+                    ) :(
+                         <Link href={role === "ADMIN" ? '/PanelAdmin' : '/PanelUser'} className='block font-iranMedium font-semibold text-sm text-text duration-300 ease-linear hover:text-secondary-100 hover:border-b border-b-primary-200'>حساب کاربری من</Link>
+                    )}
                                         <span className="block text-2xl text-text duration-300 ease-linear hover:text-secondary-100 cursor-pointer"
                                         onClick={handlerExitMenu}
                                         >

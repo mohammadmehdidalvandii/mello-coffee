@@ -11,11 +11,17 @@ import HomeAbout from '@/components/template/home/HomeAbout/HomeAbout'
 import Articles from '@/components/template/home/Articles/Articles'
 import Newsletter from '@/components/template/home/Newsletter/Newsletter'
 import Footer from '@/components/module/Footer/Footer'
+import connectToDB from '@/config/db'
+import { authUser } from '@/utils/serverHelpers'
 
-const page:React.FC = ()=>{
+const page:React.FC = async ()=>{
+  await connectToDB()
+
+  const user = await authUser()
+
   return (
   <>
-  <Navbar/>
+  <Navbar isLogin={user ? true :false} role={user?.role}/>
   <MainHeader/>
   <Category/>
   <Confidence/>
