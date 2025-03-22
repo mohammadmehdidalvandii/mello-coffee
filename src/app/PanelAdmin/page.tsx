@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Layout from '@/components/layout/AdminPanelLayout';
 
 const page:React.FC = ()=>{
   return (
-    <div>page</div>
+   <Layout>
+    this is admin panel
+   </Layout>
   )
 }
 
