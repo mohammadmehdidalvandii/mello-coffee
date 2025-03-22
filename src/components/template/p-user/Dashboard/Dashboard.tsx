@@ -7,7 +7,7 @@ import { TiDocumentText  } from "react-icons/ti";
 import {MdExitToApp, MdOutlinePayment } from 'react-icons/md'
 import swal from "sweetalert";
 
-const Dashboard: React.FC = () => {
+const Dashboard: React.FC = ({name}) => {
   const handlerExitUser = ()=>{
     swal({
         title:"ایا میخواهید از سایت خارج شوید !",
@@ -34,7 +34,7 @@ const Dashboard: React.FC = () => {
     <section className="block">
       <div className="block">
         <p className="flex font-iranMedium text-lg">
-          سلام mohammadmehdi (mohammadmehdi نیستید؟{" "}
+          سلام {name} ({name} نیستید؟{" "}
           <button className="block text-blue-400 duration-300 ease-linear hover:text-green-600 cursor-pointer"
           onClick={handlerExitUser}
           >
