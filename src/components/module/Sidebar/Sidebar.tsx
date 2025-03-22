@@ -1,7 +1,33 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
+import swal from 'sweetalert'
 
 const Sidebar:React.FC =()=>{
+
+    const handlerExitUser = ()=>{
+        swal({
+            title:"ایا میخواهید از سایت خارج شوید !",
+            icon:"error",
+            buttons:["نه","بله"]
+        }).then(async (result)=>{
+            if(result){
+                const res = await fetch('/api/auth/signout',{
+                    method:"POST"
+                })
+                if(res.status === 200){
+                    swal({
+                        title:"شما با موفقیت خارج شدید",
+                        icon:"success",
+                        buttons:"متوجه شدم"
+                    }).then(()=>{
+                        window.location.href = "/"
+                    })
+                }
+            }
+        })
+    }
+
   return (
     <section className="black">
         <div className="block border-l border-l-secondary-100 pl-2">
@@ -23,7 +49,9 @@ const Sidebar:React.FC =()=>{
                     <Link href='/PanelUser/Account' className='block font-iranMedium text-lg'>اطلاعات حساب کاربری</Link>
                 </li>
                 <li className="block mb-4">
-                    <button className='black font-iranMedium text-lg duration-300 ease-linear hover:text-danger cursor-pointer'>خروج</button>
+                    <button className='black font-iranMedium text-lg duration-300 ease-linear hover:text-danger cursor-pointer' 
+                    onClick={handlerExitUser}
+                    >خروج</button>
                 </li>
             </ul>
         </div>

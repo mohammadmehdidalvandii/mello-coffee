@@ -1,17 +1,43 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaLocationArrow, FaMoneyBill, FaRegUser } from "react-icons/fa";
 import { TiDocumentText  } from "react-icons/ti";
 import {MdExitToApp, MdOutlinePayment } from 'react-icons/md'
+import swal from "sweetalert";
 
 const Dashboard: React.FC = () => {
+  const handlerExitUser = ()=>{
+    swal({
+        title:"ایا میخواهید از سایت خارج شوید !",
+        icon:"error",
+        buttons:["نه","بله"]
+    }).then(async (result)=>{
+        if(result){
+            const res = await fetch('/api/auth/signout',{
+                method:"POST"
+            })
+            if(res.status === 200){
+                swal({
+                    title:"شما با موفقیت خارج شدید",
+                    icon:"success",
+                    buttons:"متوجه شدم"
+                }).then(()=>{
+                    window.location.href = "/"
+                })
+            }
+        }
+    })
+}
   return (
     <section className="block">
       <div className="block">
         <p className="flex font-iranMedium text-lg">
           سلام mohammadmehdi (mohammadmehdi نیستید؟{" "}
-          <button className="block text-blue-400 duration-300 ease-linear hover:text-green-600 cursor-pointer">
+          <button className="block text-blue-400 duration-300 ease-linear hover:text-green-600 cursor-pointer"
+          onClick={handlerExitUser}
+          >
             خارج شوید
           </button>{" "}
           )
