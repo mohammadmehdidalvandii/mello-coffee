@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import swal from 'sweetalert'
 
-const Sidebar:React.FC =()=>{
+const Sidebar:React.FC =({users})=>{
 
     const handlerExitUser = ()=>{
         swal({
@@ -32,28 +32,53 @@ const Sidebar:React.FC =()=>{
     <section className="black">
         <div className="block border-l border-l-secondary-100 pl-2">
             <h6 className="block font-iranBold text-xl border-b border-b-secondary-100 pb-4">حساب کاربری من</h6>
-            <ul className="block mt-4">
-                <li className="block mb-4">
-                    <Link href='/PanelUser' className='block font-iranMedium text-lg bg-secondary-400 p-2 rounded-full'>پیشخوان</Link>
-                </li>
-                <li className="block mb-4">
-                    <Link href='/PanelUser/Order' className='block font-iranMedium text-lg'>سفارش ها</Link>
-                </li>
-                <li className="block mb-4">
-                    <Link href='/PanelUser/AddressUser' className='block font-iranMedium text-lg'>آدرس</Link>
-                </li>
-                <li className="block mb-4">
-                    <Link href='/PanelUser/MyWallet' className='block font-iranMedium text-lg'>کیف پول من</Link>
-                </li>
-                <li className="block mb-4">
-                    <Link href='/PanelUser/Account' className='block font-iranMedium text-lg'>اطلاعات حساب کاربری</Link>
-                </li>
-                <li className="block mb-4">
-                    <button className='black font-iranMedium text-lg duration-300 ease-linear hover:text-danger cursor-pointer' 
-                    onClick={handlerExitUser}
-                    >خروج</button>
-                </li>
-            </ul>
+            {users.role === "ADMIN" ? (
+                  <ul className="block mt-4">
+                  <li className="block mb-4">
+                      <Link href='/PanelAdmin' className='block font-iranMedium text-lg bg-secondary-400 p-2 rounded-full'>پیشخوان</Link>
+                  </li>
+                  <li className="block mb-4">
+                      <Link href='/PanelAdmin/Order' className='block font-iranMedium text-lg'>سفارش ها</Link>
+                  </li>
+                  <li className="block mb-4">
+                      <Link href='/PanelAdmin/AddressUser' className='block font-iranMedium text-lg'>آدرس</Link>
+                  </li>
+                  <li className="block mb-4">
+                      <Link href='/PanelAdmin/MyWallet' className='block font-iranMedium text-lg'>کیف پول من</Link>
+                  </li>
+                  <li className="block mb-4">
+                      <Link href='/PanelAdmin/Account' className='block font-iranMedium text-lg'>اطلاعات حساب کاربری</Link>
+                  </li>
+                  <li className="block mb-4">
+                      <button className='black font-iranMedium text-lg duration-300 ease-linear hover:text-danger cursor-pointer' 
+                      onClick={handlerExitUser}
+                      >خروج</button>
+                  </li>
+              </ul>
+            ):(
+                <ul className="block mt-4">
+                    <li className="block mb-4">
+                        <Link href='/PanelUser' className='block font-iranMedium text-lg bg-secondary-400 p-2 rounded-full'>پیشخوان</Link>
+                    </li>
+                    <li className="block mb-4">
+                        <Link href='/PanelUser/Order' className='block font-iranMedium text-lg'>سفارش ها</Link>
+                    </li>
+                    <li className="block mb-4">
+                        <Link href='/PanelUser/AddressUser' className='block font-iranMedium text-lg'>آدرس</Link>
+                    </li>
+                    <li className="block mb-4">
+                        <Link href='/PanelUser/MyWallet' className='block font-iranMedium text-lg'>کیف پول من</Link>
+                    </li>
+                    <li className="block mb-4">
+                        <Link href='/PanelUser/Account' className='block font-iranMedium text-lg'>اطلاعات حساب کاربری</Link>
+                    </li>
+                    <li className="block mb-4">
+                        <button className='black font-iranMedium text-lg duration-300 ease-linear hover:text-danger cursor-pointer' 
+                        onClick={handlerExitUser}
+                        >خروج</button>
+                    </li>
+                </ul>
+            )}
         </div>
     </section>
   )

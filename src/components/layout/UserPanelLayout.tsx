@@ -32,7 +32,7 @@ const UserPanelLayout  = async ({children}:layoutPropsType):Promise<React.JSX.El
       <div className="container mt-12">
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
         <div className="block lg:col-span-1">
-          <Sidebar/>
+          <Sidebar users={user?.role}/>
         </div>
         <div className="block lg:col-span-3">
           {children}
