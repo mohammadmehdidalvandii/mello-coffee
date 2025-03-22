@@ -14,6 +14,20 @@ const AdminPanelLayout: React.FC = async ({
   await connectToDB();
   const user = await authUser();
   const token = cookies().get("token");
+  console.log("user", user)
+  if(user?.role !== "ADMIN"){
+    return (
+        <div className="block mx-auto text-center font-iranBlack text-4xl mt-12">
+        <h5 className="block">شما اجازه دسترسی به این صفحه ندارید</h5>
+        <Link
+          href="/"
+          className="block mt-8 text-2xl text-blue-500"
+        >
+            خانه
+        </Link>
+      </div>
+    )
+  }
 
   if (!user || !token) {
     return (
