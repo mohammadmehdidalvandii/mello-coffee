@@ -8,9 +8,7 @@ import { authUser } from "@/utils/serverHelpers";
 import { cookies } from "next/headers";
 import Link from "next/link";
 
-const AdminPanelLayout: React.FC = async ({
-  children,
-}: layoutPropsType): Promise<React.JSX.Element> => {
+const AdminPanelLayout= async ({children}:layoutPropsType):Promise<React.JSX.Element> => {
   await connectToDB();
   const user = await authUser();
   const token = cookies().get("token");
