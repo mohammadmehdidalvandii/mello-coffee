@@ -44,7 +44,7 @@ const Sidebar:React.FC =({users})=>{
                       <Link href='/PanelAdmin/Users' className='block font-iranMedium text-lg'>کاربران</Link>
                   </li>
                   <li className="block mb-4">
-                      <Link href='/PanelAdmin/MyWallet' className='block font-iranMedium text-lg'>کیف پول من</Link>
+                      <Link href='/PanelAdmin/Products' className='block font-iranMedium text-lg'>محصولات</Link>
                   </li>
                   <li className="block mb-4">
                       <Link href='/PanelAdmin/Account' className='block font-iranMedium text-lg'>اطلاعات حساب کاربری</Link>
