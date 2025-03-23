@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from '@/components/layout/AdminPanelLayout'
+import ProductList from '@/components/template/p-admin/ProductList/ProductList'
 
 const page:React.FC =()=>{
   return (
     <Layout>
-        this is product
+        <ProductList/>
     </Layout>
   )
 }
