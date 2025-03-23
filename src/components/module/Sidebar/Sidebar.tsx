@@ -32,13 +32,13 @@ const Sidebar:React.FC =({users})=>{
     <section className="black">
         <div className="block border-l border-l-secondary-100 pl-2">
             <h6 className="block font-iranBold text-xl border-b border-b-secondary-100 pb-4">حساب کاربری من</h6>
-            {users.role === "ADMIN" ? (
+            {users === "ADMIN" ? (
                   <ul className="block mt-4">
                   <li className="block mb-4">
                       <Link href='/PanelAdmin' className='block font-iranMedium text-lg bg-secondary-400 p-2 rounded-full'>پیشخوان</Link>
                   </li>
                   <li className="block mb-4">
-                      <Link href='/PanelAdmin/Order' className='block font-iranMedium text-lg'>سفارش ها</Link>
+                      <Link href='/PanelAdmin/Orders' className='block font-iranMedium text-lg'>سفارش ها</Link>
                   </li>
                   <li className="block mb-4">
                       <Link href='/PanelAdmin/AddressUser' className='block font-iranMedium text-lg'>آدرس</Link>
