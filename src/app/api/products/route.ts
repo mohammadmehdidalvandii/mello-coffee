@@ -72,12 +72,12 @@ export async function POST(req:NextRequest){
 
 
 
-// export async function GET(){
-//     connectToDB();
-//     const products = await ProductModel.find();
-//     return Response.json(
-//         {message:"get allProduct " , products},
-//         {status:200}
-//     )
+export async function GET(){
+    connectToDB();
+    const products = await ProductModel.find();
+    return Response.json(
+        {message:"get allProduct " , products},
+        {status:200}
+    )
 
-// }
+}
