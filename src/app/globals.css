@@ -65,7 +65,23 @@
         font-iranMedium font-bold text-md
         placeholder:font-iranMedium placeholder:text-md placeholder:font-bold pr-1
     }
+    .swal-title{
+        @apply font-iranBlack text-2xl
+    }
+    
 }
+.swal-button--cancel{
+    @apply flex items-center font-iranBold text-lg text-white bg-red-700 duration-300 hover:bg-red-500
+}
+ .swal-button--cancel:not([disabled]):hover{
+    @apply bg-red-500
+ }
+ .swal-button--confirm{
+    @apply flex items-center font-iranBold text-lg text-white bg-green-700 duration-300 hover:bg-green-500
+ }
+ .swal-button--confirm:not([disabled]):hover{
+    @apply bg-green-500
+ }
 .swiper-button-next , 
 .swiper-button-prev{
     color: var(--color-primary-100) !important;
